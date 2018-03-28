@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>beautifullCheckbox</title>
+
+    <style>
+	
+		fieldset{
+			border:1px dashed #AAA;
+		}
+	
+		.form-group .checkbox {
+			display:block;
+		}
+	
+        .checkbox {
+            display: inline-block;
+
+            user-select: none;
+            -webkit-user-select: none;
+        }
+		
+		
+        .checkbox > input[type=checkbox] {
+            visibility: hidden;
+        }
+
+        .checkbox >input[type=checkbox] + label {
+            position:relative;
+			
+        }
+
+        .checkbox > input[type=checkbox] + label:before,
+        .checkbox > input[type=checkbox] + label:after
+        {
+            content:'\20';
+            position: absolute;
+            bottom:0;
+            left:-20px;
+            height:15px;
+            width:15px;
+			color:#AAA;
+			opacity:.25;
+		}
+		
+		.checkbox > input[type=checkbox] + label:hover:before,
+		.checkbox > input[type=checkbox]:checked + label:before,
+		.checkbox > input[type=checkbox]:checked + label:after{
+			opacity:1;
+		}
+		
+        .checkbox > input[type=checkbox] + label:before {
+            border:1px solid;
+			z-index:1;
+        }
+
+        .checkbox > input[type=checkbox] + label:after {
+			margin-left:5px;
+			margin-bottom:0px;
+            width:5px;
+            height:9px;
+            border:1px solid;
+            opacity:0;
+            border-top-color: transparent;
+            border-left-color:transparent;
+            z-index:0;
+			
+			transform: rotate(45deg);
+			-webkit-transform:rotate(45deg);
+			-moz-transform:rotate(45deg);
+			
+			transition:margin-bottom .35s ease-out, opacity .35s ease-out;
+			-webkit-transition:margin-bottom .35s ease-out, opacity .35s ease-out;
+			-moz-transition:margin-bottom .35s ease-out, opacity .35s ease-out;
+		}
+		
+		.checkbox > input[type=checkbox]:checked + label:after {
+			margin-bottom:5px;
+			
+		}
+		
+		.checkbox > input[type=checkbox]:checked + label:before,
+        .checkbox > input[type=checkbox]:checked + label:after {
+            color:#BBB;
+        }
+
+        .checkbox.red > input[type=checkbox]:checked + label:before,
+        .checkbox.red > input[type=checkbox]:checked + label:after {
+            color:#d9534f;
+        }
+
+        .checkbox.green > input[type=checkbox]:checked + label:before,
+        .checkbox.green > input[type=checkbox]:checked + label:after {
+            color:#5cb85c;
+        }
+
+        .checkbox.blue > input[type=checkbox]:checked + label:before,
+        .checkbox.blue > input[type=checkbox]:checked + label:after {
+            color:#428bca;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+    <fieldset >
+		<legend>you are love?</legend>
+		
+		<div class="form-group">
+			<div class="checkbox">
+				<input type="checkbox" name="love" id="love-swimming" value="swimming">
+				<label for="love-swimming">swimming</label>
+			</div>
+
+			<div class="checkbox green">
+				<input type="checkbox" name="love" id="love-game" value="game">
+				<label for="love-game">game</label>
+			</div>
+
+			<div class="checkbox red">
+				<input type="checkbox" name="love" id="love-ski" value="ski">
+				<label for="love-ski">ski</label>
+			</div>
+
+			<div class="checkbox blue">
+				<input type="checkbox" name="love" id="love-fly" value="fly">
+				<label for="love-fly">swimming</label>
+			</div>
+		</div>
+	</fieldset>
+    
+
+
+
+</body>
+</html>
