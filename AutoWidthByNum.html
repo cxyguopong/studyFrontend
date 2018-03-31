@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>muti-Column had equal height</title>
+		<meta http-equiv="Content-type" content="text/html;charset=utf8">
+
+		<link type="text/css" href="./css/reset.css" rel="stylesheet">
+
+		<style>
+			.wrap{
+				display: block;
+				font-size:0;
+			}
+
+			.wrap .it {
+				display: inline-block;
+				width:100%;
+				min-height:100px;
+			}
+
+			.wrap .it:nth-child(1):nth-last-child(2),
+			.wrap .it:nth-child(1):nth-last-child(2) ~ .it {
+				width:50%;
+			}
+
+			.wrap .it:nth-child(1):nth-last-child(3),
+			.wrap .it:nth-child(1):nth-last-child(3) ~ .it {
+
+				width:33.33333%;
+			}
+
+			.wrap .it:nth-child(1):nth-last-child(4),
+			.wrap .it:nth-child(1):nth-last-child(4) ~ .it {
+				width:25%;
+			}
+
+			.wrap .it:nth-child(odd) {
+				background:wheat;
+			}
+
+			.wrap .it:nth-child(even) {
+				background-color: #00AAFF;
+			}
+
+
+
+
+
+		</style>
+
+	</head>
+	<body>
+
+		<div class="wrap">
+			<div class="it">
+			</div>
+			<div class="it">
+			</div>
+			<div class="it">
+			</div>
+			<div class="it"></div>
+		</div>
+
+	</body>
+</html>
