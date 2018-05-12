@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>css linear-gradient</title>
+
+<style>
+
+.picDiv{position:relative; width: 400px; height:400px; padding: 5px; border: 1px solid #eee; float: left; border-radius: 2px;}
+
+    .picDiv:before,
+    .picDiv:after {
+        content:'\20';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width:100%;
+        height:100%;
+
+    }
+
+    .picDiv:before {
+        background-image: linear-gradient(to right, rgba(0,0,0, .05), rgba(0,0,0, .05) 25%, transparent 25%, transparent 50%, rgba(0,0,0, .05) 50%, rgba(0,0,0,.05) 75%, transparent 75%, transparent);
+        background-image:-webkit-linear-gradient(left, rgba(0,0,0, .05), rgba(0,0,0, .05) 25%, transparent 25%, transparent 50%, rgba(0,0,0, .05) 50%, rgba(0,0,0, .05) 75%, transparent 75%, transparent);
+        background-size:25px 25px;
+    }
+    .picDiv:after {
+        background-image: linear-gradient(to bottom, rgba(0,0,0, .05), rgba(0,0,0, .05) 25%, transparent 25%, transparent 50%, rgba(0,0,0, .05) 50%, rgba(0,0,0,.05) 75%, transparent 75%, transparent);
+        background-image:-webkit-linear-gradient(top, rgba(0,0,0, .05), rgba(0,0,0, .05) 25%, transparent 25%, transparent 50%, rgba(0,0,0, .05) 50%, rgba(0,0,0, .05) 75%, transparent 75%, transparent);
+        background-size:25px 25px;
+    }
+</style>
+
+</head>
+<body>
+
+<div class="picDiv"></div>
+
+</body>
